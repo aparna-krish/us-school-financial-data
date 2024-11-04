@@ -23,14 +23,27 @@
 
   <body>
     <header>
-      <h1><a href=".">TODO: Your project name</a></h1>
+      <h1><a href=".">US school effort </a></h1>
 
       <p>
-        <strong>Team Members</strong>: [TODO] team member #1, team member #2,
-        team member #3, team member #4
+        <strong>Team Members</strong>: Raymond, Negar,
+        Leo, Aparna
       </p>
     </header>
+    <section>
+      <div id="observablehq-viewof-yearAnimate-2b2d7add"></div>
+      <div id="observablehq-map-2b2d7add"></div>
 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+      <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/d/0d8a1801e822f9cf@463.js?v=4";
+      new Runtime().module(define, name => {
+        if (name === "viewof yearAnimate") return new Inspector(document.querySelector("#observablehq-viewof-yearAnimate-2b2d7add"));
+        if (name === "map") return new Inspector(document.querySelector("#observablehq-map-2b2d7add"));
+      });
+</script>
+    </section>
     <footer>
       <p>
         <a href="https://gitlab.cs.washington.edu/cse442/24au/a3/us-school-data"
